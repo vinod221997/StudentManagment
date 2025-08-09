@@ -9,8 +9,8 @@ public class Student {
     private String studentFirstName;
     private String studentLastName;
     private String studentEmail;
-    private String studentPhoneNumber;
-    private Date studentDateOfBirth;
+    private long studentPhoneNumber;
+    private LocalDate studentDateOfBirth;
     private String studentGender;
     private Address studentAddress;
     private LocalDate studentEnrollmentDate;
@@ -21,7 +21,18 @@ public class Student {
     public Student() {
     }
 
-    public Student(int studentId, String studentFirstName, String studentLastName, String studentEmail, String studentPhoneNumber, Date studentDateOfBirth, String studentGender, Address studentAddress, LocalDate studentEnrollmentDate, Department department, List studentCourse, String studentStatus) {
+    public Student( String studentFirstName, String studentLastName, String studentEmail, long studentPhoneNumber, LocalDate studentDateOfBirth, String studentGender,  LocalDate studentEnrollmentDate,  String studentStatus) {
+        this.studentFirstName = studentFirstName;
+        this.studentLastName = studentLastName;
+        this.studentEmail = studentEmail;
+        this.studentPhoneNumber = studentPhoneNumber;
+        this.studentDateOfBirth = studentDateOfBirth;
+        this.studentGender = studentGender;
+        this.studentEnrollmentDate = studentEnrollmentDate;
+        this.studentStatus = studentStatus;
+    }
+
+    public Student(int studentId, String studentFirstName, String studentLastName, String studentEmail, long studentPhoneNumber, LocalDate studentDateOfBirth, String studentGender, LocalDate studentEnrollmentDate, String studentStatus) {
         this.studentId = studentId;
         this.studentFirstName = studentFirstName;
         this.studentLastName = studentLastName;
@@ -29,10 +40,7 @@ public class Student {
         this.studentPhoneNumber = studentPhoneNumber;
         this.studentDateOfBirth = studentDateOfBirth;
         this.studentGender = studentGender;
-        this.studentAddress = studentAddress;
         this.studentEnrollmentDate = studentEnrollmentDate;
-        this.department = department;
-        this.studentCourse = studentCourse;
         this.studentStatus = studentStatus;
     }
 
@@ -68,19 +76,19 @@ public class Student {
         this.studentEmail = studentEmail;
     }
 
-    public String getStudentPhoneNumber() {
+    public long getStudentPhoneNumber() {
         return studentPhoneNumber;
     }
 
-    public void setStudentPhoneNumber(String studentPhoneNumber) {
+    public void setStudentPhoneNumber(long studentPhoneNumber) {
         this.studentPhoneNumber = studentPhoneNumber;
     }
 
-    public Date getStudentDateOfBirth() {
+    public LocalDate getStudentDateOfBirth() {
         return studentDateOfBirth;
     }
 
-    public void setStudentDateOfBirth(Date studentDateOfBirth) {
+    public void setStudentDateOfBirth(LocalDate studentDateOfBirth) {
         this.studentDateOfBirth = studentDateOfBirth;
     }
 

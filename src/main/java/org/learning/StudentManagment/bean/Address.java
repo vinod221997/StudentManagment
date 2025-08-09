@@ -4,13 +4,13 @@ public class Address {
     private String street;
     private String city;
     private String state;
-    private String postalCode;
+    private int postalCode;
     private String country;
 
     public Address() {
     }
 
-    public Address(String street, String city, String state, String postalCode, String country) {
+    public Address(String street, String city, String state, int postalCode, String country) {
         this.street = street;
         this.city = city;
         this.state = state;
@@ -42,11 +42,11 @@ public class Address {
         this.state = state;
     }
 
-    public String getPostalCode() {
+    public int getPostalCode() {
         return postalCode;
     }
 
-    public void setPostalCode(String postalCode) {
+    public void setPostalCode(int postalCode) {
         this.postalCode = postalCode;
     }
 
